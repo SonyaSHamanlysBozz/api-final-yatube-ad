@@ -10,13 +10,13 @@ urlpatterns = [
     path('api/v1/', include('api.urls')),
     path(
         'api/v1/jwt/create/',
-         TokenObtainPairView.as_view(),
-         name='jwt-create'
+        TokenObtainPairView.as_view(),
+        name='jwt-create'
     ),
     path(
         'api/v1/jwt/refresh/',
-         TokenRefreshView.as_view(),
-         name='jwt-refresh'
+        TokenRefreshView.as_view(),
+        name='jwt-refresh'
     ),
     path('api/v1/jwt/verify/', TokenVerifyView.as_view(), name='jwt-verify'),
     path(

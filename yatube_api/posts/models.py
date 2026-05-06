@@ -11,7 +11,7 @@ class Group(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 
 class Post(models.Model):
     text = models.TextField()
