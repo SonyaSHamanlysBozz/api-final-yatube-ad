@@ -1,5 +1,4 @@
 from rest_framework import viewsets, filters
-from django_filters.rest_framework import DjangoFilterBackend
 from posts.models import Post, Group, Comment, Follow
 from .serializers import (PostSerializer,
                           GroupSerializer,
@@ -51,4 +50,3 @@ class FollowViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
-        
